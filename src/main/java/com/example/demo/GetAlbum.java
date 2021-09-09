@@ -12,7 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
 public class GetAlbum {
-  private static final String accessToken = "taHZ2SdB-bPA3FsK3D7ZN5npZS47cMy-IEySVEGttOhXmqaVAIo0ESvTCLjLBifhHOHOIuhFUKPW1WMDP7w6dj3MAZdWT8CLI2MkZaXbYLTeoDvXesf2eeiLYPBGdx8tIwQJKgV8XdnzH_DONk";
+  private static final String accessToken = "BQDrlN8wH181pJtm18_CWCT4-Jkz7sEziba1myusS11JpYYHpnF1SLL4bRIcyTJ8K_ZapsTPsnr9Lb6gfxk";
   private static final String id = "5zT1JLIj9E57p3e1rFm9Uq";
 
   private static final SpotifyApi spotifyApi = new SpotifyApi.Builder()
