@@ -22,6 +22,10 @@ import java.util.concurrent.CompletableFuture;
 
 import java.util.concurrent.CompletionException;
 
+import com.wrapper.spotify.model_objects.specification.Album;
+import com.wrapper.spotify.requests.data.albums.GetAlbumRequest;
+
+
 
 
 public class ClientCredential {
@@ -29,6 +33,8 @@ public class ClientCredential {
   private static final String clientId = "6ffddbc222ce4a4192cd716e4b1a8f70";
 
   private static final String clientSecret = "04876b9104f0410abb758abe2ad9603e";
+
+  private static final String id = "5zT1JLIj9E57p3e1rFm9Uq";
 
 
 
@@ -110,6 +116,15 @@ public class ClientCredential {
 
   }
 
+  public static SpotifyApi return_API(){
+    clientCredentials_Sync();
+
+    clientCredentials_Async();
+    return spotifyApi;
+  }
+
+
+
 
 
   public static void main(String[] args) {
@@ -117,6 +132,7 @@ public class ClientCredential {
     clientCredentials_Sync();
 
     clientCredentials_Async();
+  
 
   }
 

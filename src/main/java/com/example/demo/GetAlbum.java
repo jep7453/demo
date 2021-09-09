@@ -12,12 +12,12 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
 public class GetAlbum {
-  private static final String accessToken = "BQDrlN8wH181pJtm18_CWCT4-Jkz7sEziba1myusS11JpYYHpnF1SLL4bRIcyTJ8K_ZapsTPsnr9Lb6gfxk";
+
   private static final String id = "5zT1JLIj9E57p3e1rFm9Uq";
 
-  private static final SpotifyApi spotifyApi = new SpotifyApi.Builder()
-    .setAccessToken(accessToken)
-    .build();
+ 
+  private static final SpotifyApi spotifyApi = ClientCredential.return_API();
+
   private static final GetAlbumRequest getAlbumRequest = spotifyApi.getAlbum(id)
 //          .market(CountryCode.SE)
     .build();
