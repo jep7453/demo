@@ -13,22 +13,34 @@ import java.util.concurrent.CompletionException;
 
 public class GetAlbum {
 
-  private static final String id = "5zT1JLIj9E57p3e1rFm9Uq";
 
+
+  private static String id = "";
  
   private static final SpotifyApi spotifyApi = ClientCredential.return_API();
 
-  private static final GetAlbumRequest getAlbumRequest = spotifyApi.getAlbum(id)
+  private static GetAlbumRequest getAlbumRequest = spotifyApi.getAlbum(id)
 //          .market(CountryCode.SE)
     .build();
 
-  public static void getAlbum_Sync() {
+    public void newRequest(String ids) {
+      id = ids;
+      getAlbumRequest = spotifyApi.getAlbum(id)
+//          .market(CountryCode.SE)
+    .build();
+
+    }
+
+
+  public static String getAlbum_Sync() {
     try {
       final Album album = getAlbumRequest.execute();
 
       System.out.println("Name: " + album.getName());
+      return album.getName();
     } catch (IOException | SpotifyWebApiException | ParseException e) {
       System.out.println("Error: " + e.getMessage());
+      return e.getMessage();
     }
   }
 
